@@ -5,6 +5,6 @@ from event_bus import EventBus
 
 __all__ = ['db', 'console']
 bus = EventBus()
-db_location = 'data/tableau.db'
+db_location = os.getcwd() + '/tableau.db'
 
 print("DB Location: " + db_location)
