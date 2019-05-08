@@ -2,3 +2,4 @@ Flask==1.0.2
 luma.led_matrix
 tinydb
 event-bus
+waitress
