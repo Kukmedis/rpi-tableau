@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-./pi-tableau-venv/bin/waitress install -r requirements.txt
+export FLASK_APP=api
+./pi-tableau-venv/bin/waitress-serve --call 'api:create_app'

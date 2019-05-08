@@ -2,6 +2,9 @@ from cfg import bus, db_location
 import sqlite3
 
 
+__all__ = ['bus', 'db_location']
+
+
 def init():
     create_table_statement = """
         CREATE TABLE IF NOT EXISTS counters (
@@ -31,6 +34,13 @@ def increment_counter(name):
         select_value_statement = "SELECT value FROM counters WHERE name = ?;"
         counter = conn.execute(select_value_statement, [name]).fetchone()[0]
     bus.emit('counter:updated', name, counter, threads=True)
+
+
+def get_counter(name):
+    with sqlite3.connect(db_location) as conn:
+        select_value_statement = "SELECT value FROM counters WHERE name = ?;"
+        result = conn.execute(select_value_statement, [name]).fetchone()
+        return result[0] if result is not None else None
 
 
 init()

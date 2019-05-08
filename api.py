@@ -5,9 +5,7 @@ import console
 from flask import Flask, request, abort
 from cfg import bus
 
-
 __all__ = ['db', 'console']
-
 app = Flask(__name__)
 api_key = os.environ['API_KEY']
 
@@ -35,8 +33,11 @@ def validate_header():
         abort(400)
 
 
-init()
+def create_app():
+    init()
+    return app
 
 
 if __name__ == '__main__':
-    app.run(debug=True,host='0.0.0.0',port=80)
+    init()
+    app.run(debug=True,host='0.0.0.0',port=80,use_reloader=False)
