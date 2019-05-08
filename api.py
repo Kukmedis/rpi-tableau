@@ -1,11 +1,11 @@
 import os
 import db
-import console
+import tableau
 
 from flask import Flask, request, abort
 from cfg import bus
 
-__all__ = ['db', 'console']
+__all__ = ['db', 'tableau']
 app = Flask(__name__)
 api_key = os.environ['API_KEY']
 
