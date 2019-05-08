@@ -30,6 +30,6 @@ def loop():
     while True:
         counter = db.get_counter("tx")
         if counter != last_displayed:
-            draw_text(counter)
+            draw_text(str(counter))
         last_displayed = counter
         sleep(1)
