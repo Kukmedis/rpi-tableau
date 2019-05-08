@@ -170,3 +170,4 @@ venv.bak/
 .idea/modules.xml
 .idea/vcs.xml
 pi-tableau.iml
+/.idea/
