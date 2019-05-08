@@ -166,4 +166,7 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-/pi-tableau.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+pi-tableau.iml
