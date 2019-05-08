@@ -1,0 +1,5 @@
+Flask==1.0.2
+flask-inputs==0.3
+jsonschema==2.6.0
+luma.led_matrix
+tinydb
