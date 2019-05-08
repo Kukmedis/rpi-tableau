@@ -1,7 +1,8 @@
 from cfg import bus
 import sqlite3
+import os
 
-conn = sqlite3.connect('~/data/tableau.db')
+conn = sqlite3.connect(os.path.expanduser('~/data/tableau.db'))
 cursor = conn.cursor()
 create_table_statement = """
     CREATE TABLE IF NOT EXISTS counters (
