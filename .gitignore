@@ -169,3 +169,4 @@ venv.bak/
 pi-tableau.iml
 /.idea/
 /pi-tableau-venv/
+/tableau.db
